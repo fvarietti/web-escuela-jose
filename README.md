@@ -1,72 +1,61 @@
 # Escuela del Maestro José Montevideo
 
-Sitio web estático de la Escuela de Crecimiento Espiritual. Es una sola página (`index.html`) con las secciones Inicio, Sobre la escuela, Audios, Actividades, Recursos y Contacto. No necesita instalar nada ni compilar.
+Sitio web estático de la Escuela de Crecimiento Espiritual. HTML y CSS puros: no necesita instalar nada ni compilar.
 
 ## Estructura
 
 ```
 web-escuela-jose/
-├── index.html        # Toda la página (HTML y CSS)
-├── img/              # Imágenes del sitio
-│   ├── loto.jpg
-│   └── meditacion.jpg
-├── audios/           # Audios en MP3 (reproducir y descargar)
+├── index.html              # Inicio: presentación, resumen de la escuela, actividades, últimos audios y contacto
+├── sobre-la-escuela.html   # Texto completo sobre la escuela
+├── audios.html             # Todos los audios (reproducir y descargar)
+├── recursos.html           # Materiales (vacía por ahora)
+├── styles.css              # Estilos de todo el sitio (colores y tipografía en el bloque :root)
+├── img/                    # Imágenes
+├── audios/                 # Archivos MP3
 └── README.md
 ```
 
 ## Ver el sitio en tu computadora
 
-Abre `index.html` con el navegador (doble clic). No hace falta un servidor.
+Abre `index.html` con el navegador (doble clic).
 
 ## Publicar con GitHub Pages
 
-1. Sube el contenido de esta carpeta al repositorio (rama `main`).
-2. En GitHub: **Settings → Pages**.
-3. En **Build and deployment**, elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
-4. Guarda. En uno o dos minutos el sitio queda disponible en:
-   `https://fvarietti.github.io/web-escuela-jose/`
+1. Sube todo el contenido de esta carpeta al repositorio (rama `main`).
+2. En GitHub: **Settings → Pages → Deploy from a branch → main / (root) → Save**.
+3. El sitio queda en `https://fvarietti.github.io/web-escuela-jose/` en uno o dos minutos.
 
-Cada vez que hagas *commit* de un cambio en `main`, el sitio se actualiza solo.
+Cada cambio guardado en `main` actualiza el sitio automáticamente.
 
-## Cómo editar el contenido
+## Cómo editar
 
-Todo el texto está en `index.html`. Busca cada sección por su `id`:
-
-| Sección | Dónde buscar |
-|---|---|
-| Inicio | `<section id="inicio">` |
-| Sobre la escuela | `<section id="escuela">` |
-| Audios | `<section id="audios">` |
-| Actividades | `<section id="actividades">` |
-| Recursos | `<section id="recursos">` |
-| Contacto | `<section id="contacto">` |
-
-Los colores y la tipografía se cambian al inicio del archivo, en el bloque `:root` dentro de `<style>`.
+- **Textos de la escuela**: `sobre-la-escuela.html`. El resumen del inicio está en `index.html`, en `<section id="escuela">`.
+- **Actividades y contacto**: `index.html`, en `<section id="actividades">` y `<section id="contacto">`. Para una actividad nueva, copia una fila `<li class="fila">` y cambia el título (`<h3>`), el día y horario (`<small>`) y la descripción (`<p>`).
+- **Colores y tipografía**: `styles.css`.
+- **Menú**: está repetido en cada página `.html`; si lo cambias, hazlo en todas.
 
 ### Agregar un audio
 
-1. Guarda el MP3 en la carpeta `audios/` (por ejemplo `audios/charla-04.mp3`).
-2. Copia una fila `<li class="fila">…</li>` de la sección Audios y cambia el título, la duración, el peso y las dos rutas del archivo (en `<audio src>` y en el enlace de descarga).
+1. Guarda el MP3 en `audios/` (por ejemplo `audios/charla-04.mp3`, sin espacios ni tildes).
+2. En `audios.html`, copia una fila `<li class="fila">…</li>` y cambia el título, la duración, el peso y la ruta del archivo (en `<audio src>` y en el enlace de descarga).
+3. Si quieres que aparezca entre los últimos audios del inicio, copia también la fila en `index.html`, en `<section id="audios">`.
 
-Para que los archivos pesen poco, conviene exportar la voz en MP3 mono a 64 kbps (15 min ≈ 7 MB, 45 min ≈ 22 MB). Con `ffmpeg`:
+Para que pesen poco, exporta la voz en MP3 mono a 64 kbps (15 min ≈ 7 MB, 45 min ≈ 22 MB):
 
 ```
 ffmpeg -i original.wav -ac 1 -b:a 64k charla-04.mp3
 ```
 
-GitHub Pages recomienda sitios de hasta 1 GB aproximadamente; si la colección de audios crece mucho, conviene alojarlos en otro servicio (por ejemplo Internet Archive) y enlazarlos desde la página.
+Desde la web de GitHub se pueden subir archivos de hasta 25 MB; para más, usa GitHub Desktop o la terminal. GitHub Pages recomienda sitios de hasta 1 GB aproximadamente; si la colección crece mucho, conviene alojar los audios en otro servicio (por ejemplo Internet Archive) y enlazarlos.
 
-### Agregar una actividad
+### Agregar recursos
 
-Copia una fila `<li class="fila">` de la sección Actividades y cambia el día, el mes, el título, el horario y el lugar.
-
-### Cambiar las imágenes
-
-Reemplaza los archivos de `img/` por los nuevos (con el mismo nombre) o cambia las rutas en `index.html`. Recomendado: JPG de unos 1000 px de ancho y menos de 150 KB.
+Edita `recursos.html`: reemplaza el mensaje `<p class="vacio">` por los contenidos.
 
 ### Mapa de ubicación
 
-En la sección Contacto hay un espacio reservado. Para incrustar un mapa: en Google Maps, **Compartir → Insertar un mapa**, copia el `<iframe>` y reemplaza el `<div class="mapa">…</div>`.
+En Contacto hay un espacio reservado. En Google Maps: **Compartir → Insertar un mapa**, copia el `<iframe>` y reemplaza el `<div class="mapa">…</div>`.
 
 ## Créditos
 

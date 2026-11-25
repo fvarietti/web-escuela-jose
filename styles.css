@@ -1,0 +1,85 @@
+:root{
+  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#CFE6F2; --celeste-2:#A9CFE3;
+  --tinta:#34414B; --suave:#5C6B76; --enlace:#2F6684; --r:28px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:76px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:"Nunito",system-ui,sans-serif;background:var(--arena);color:var(--tinta);line-height:1.65;font-size:1.05rem}
+img{display:block;max-width:100%;background:var(--arena-2)}
+a{color:var(--enlace)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--enlace);outline-offset:3px;border-radius:8px}
+h1,h2,h3{line-height:1.2;font-weight:800}
+h1{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:.6em}
+h3{font-size:1.15rem}
+p{max-width:62ch}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:4.5rem 0}
+
+/* Navegación */
+header{position:sticky;top:0;z-index:10;background:rgba(246,239,226,.93);backdrop-filter:blur(8px)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem 0}
+.marca{font-weight:800;text-decoration:none;color:var(--tinta)}
+nav ul{display:flex;gap:.2rem;list-style:none;padding:0;flex-wrap:wrap}
+nav ul a{display:block;padding:.4rem .85rem;border-radius:999px;text-decoration:none;color:var(--tinta);font-weight:600;font-size:.95rem}
+nav ul a:hover{background:var(--celeste)}
+
+/* Botones */
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:999px;background:var(--celeste-2);color:var(--tinta);font-weight:800;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--celeste)}
+
+/* Inicio */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero p{margin:1.2rem 0 1.8rem;color:var(--suave);font-size:1.15rem}
+.blob{border-radius:62% 38% 55% 45% / 48% 58% 42% 52%;aspect-ratio:1;width:100%;max-width:480px;justify-self:center;object-fit:cover}
+.blob-2{border-radius:40% 60% 38% 62% / 55% 42% 58% 45%}
+
+/* Olas */
+.ola{display:block;width:100%;height:60px;margin-bottom:-1px}
+
+/* Bandas de color */
+.celeste{background:var(--celeste)}
+.arena2{background:var(--arena-2)}
+
+/* Sobre la escuela */
+.dos{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.dos p+p{margin-top:1rem}
+.valores{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem;list-style:none;padding:0}
+.valores li{background:var(--arena);padding:.4rem 1rem;border-radius:999px;font-weight:600;font-size:.95rem}
+
+/* Listas: audios y actividades */
+.lista{list-style:none;padding:0;display:grid;gap:.9rem}
+.fila{display:flex;align-items:center;gap:1.2rem;background:var(--arena);padding:1rem 1.3rem;border-radius:var(--r)}
+.fila .txt{flex:1}
+.fila small{color:var(--suave);font-size:.9rem}
+.fila small{font-weight:600}
+.fila p{margin-top:.5rem;color:var(--suave);font-size:1rem}
+audio{display:block;width:100%;height:40px;margin-top:.7rem}
+
+/* Recursos */
+
+/* Contacto */
+.contacto .dos{grid-template-columns:1fr 1fr}
+.contacto dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin-top:1.2rem}
+.contacto dt{font-weight:800}
+.mapa{border-radius:var(--r);background:var(--celeste);min-height:300px;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--suave)}
+
+.vacio{background:var(--arena-2);padding:2rem;border-radius:var(--r);color:var(--suave)}
+footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero .wrap,.dos,.contacto .dos{grid-template-columns:1fr;gap:2rem}
+  .blob{max-width:320px}
+  section{padding:3.2rem 0}
+  nav ul{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.2rem}
+  nav ul a{white-space:nowrap}
+  .fila{flex-wrap:wrap}
+}
+
+/* Varias páginas */
+nav ul a[aria-current="page"]{background:var(--celeste)}
+.mas{margin-top:1.8rem}
+.texto h2{margin-top:1.8em;font-size:1.4rem}
+.texto p+p{margin-top:1rem}
+.texto{padding-top:0}

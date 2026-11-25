@@ -7,112 +7,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#CFE6F2; --celeste-2:#A9CFE3;
-  --tinta:#34414B; --suave:#5C6B76; --enlace:#2F6684; --r:28px;
-}
-*{box-sizing:border-box;margin:0}
-html{scroll-padding-top:76px}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{font-family:"Nunito",system-ui,sans-serif;background:var(--arena);color:var(--tinta);line-height:1.65;font-size:1.05rem}
-img{display:block;max-width:100%;background:var(--arena-2)}
-a{color:var(--enlace)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--enlace);outline-offset:3px;border-radius:8px}
-h1,h2,h3{line-height:1.2;font-weight:800}
-h1{font-size:clamp(2.2rem,5.5vw,3.6rem)}
-h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:.6em}
-h3{font-size:1.15rem}
-p{max-width:62ch}
-.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
-section{padding:4.5rem 0}
-
-/* Navegación */
-header{position:sticky;top:0;z-index:10;background:rgba(246,239,226,.93);backdrop-filter:blur(8px)}
-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem 0}
-.marca{font-weight:800;text-decoration:none;color:var(--tinta)}
-nav ul{display:flex;gap:.2rem;list-style:none;padding:0;flex-wrap:wrap}
-nav ul a{display:block;padding:.4rem .85rem;border-radius:999px;text-decoration:none;color:var(--tinta);font-weight:600;font-size:.95rem}
-nav ul a:hover{background:var(--celeste)}
-
-/* Botones */
-.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:999px;background:var(--celeste-2);color:var(--tinta);font-weight:800;text-decoration:none;transition:background .2s}
-.btn:hover{background:var(--celeste)}
-
-/* Inicio */
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-.hero p{margin:1.2rem 0 1.8rem;color:var(--suave);font-size:1.15rem}
-.blob{border-radius:62% 38% 55% 45% / 48% 58% 42% 52%;aspect-ratio:1;width:100%;max-width:480px;justify-self:center;object-fit:cover}
-.blob-2{border-radius:40% 60% 38% 62% / 55% 42% 58% 45%}
-
-/* Olas */
-.ola{display:block;width:100%;height:60px;margin-bottom:-1px}
-
-/* Bandas de color */
-.celeste{background:var(--celeste)}
-.arena2{background:var(--arena-2)}
-
-/* Sobre la escuela */
-.dos{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
-.dos p+p{margin-top:1rem}
-.valores{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem;list-style:none;padding:0}
-.valores li{background:var(--arena);padding:.4rem 1rem;border-radius:999px;font-weight:600;font-size:.95rem}
-
-/* Listas: audios y actividades */
-.lista{list-style:none;padding:0;display:grid;gap:.9rem}
-.fila{display:flex;align-items:center;gap:1.2rem;background:var(--arena);padding:1rem 1.3rem;border-radius:var(--r)}
-.fila .txt{flex:1}
-.fila small{color:var(--suave);font-size:.9rem}
-audio{display:block;width:100%;height:40px;margin-top:.7rem}
-.fecha{flex:none;width:64px;text-align:center;background:var(--celeste);border-radius:18px;padding:.4rem 0;line-height:1.2}
-.fecha b{display:block;font-size:1.5rem}
-.fecha span{font-size:.85rem;font-weight:600}
-
-/* Recursos */
-
-/* Contacto */
-.contacto .dos{grid-template-columns:1fr 1fr}
-.contacto dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin-top:1.2rem}
-.contacto dt{font-weight:800}
-.mapa{border-radius:var(--r);background:var(--celeste);min-height:300px;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--suave)}
-
-.vacio{background:var(--arena-2);padding:2rem;border-radius:var(--r);color:var(--suave)}
-footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
-
-@media (max-width:760px){
-  .hero .wrap,.dos,.contacto .dos{grid-template-columns:1fr;gap:2rem}
-  .blob{max-width:320px}
-  section{padding:3.2rem 0}
-  nav ul{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:.2rem}
-  nav ul a{white-space:nowrap}
-  .fila{flex-wrap:wrap}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
   <nav class="wrap" aria-label="Principal">
-    <a class="marca" href="#inicio">Escuela del Maestro José Montevideo</a>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#escuela">Sobre la escuela</a></li>
-      <li><a href="#audios">Audios</a></li>
-      <li><a href="#actividades">Actividades</a></li>
-      <li><a href="#recursos">Recursos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+    <a class="marca" href="index.html">Escuela del Maestro José Montevideo</a>
+    <ul><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="sobre-la-escuela.html">Sobre la escuela</a></li><li><a href="audios.html">Audios</a></li><li><a href="index.html#actividades">Actividades</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="index.html#contacto">Contacto</a></li></ul>
   </nav>
 </header>
 
 <main>
+
 
 <section id="inicio" class="hero">
   <div class="wrap">
     <div>
       <h1>Un espacio para crecer con calma</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a class="btn" href="#actividades">Ver próximas actividades</a>
+      <a class="btn" href="#escuela">Conoce la escuela</a>
     </div>
     <img class="blob" src="img/loto.jpg" alt="Flor de loto blanca sobre hojas en un estanque" width="700" height="700" style="object-position:50% 40%">
   </div>
@@ -125,10 +39,7 @@ footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
     <div>
       <h2>Sobre la escuela</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero. Sed cursus ante dapibus diam, sed nisi nulla quis sem at nibh elementum imperdiet.</p>
-      <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa vestibulum lacinia arcu eget nulla.</p>
-      <ul class="valores">
-        <li>Lorem ipsum</li><li>Dolor sit</li><li>Amet consectetur</li>
-      </ul>
+      <div class="mas"><a class="btn" href="sobre-la-escuela.html">Conoce más</a></div>
     </div>
   </div>
 </section>
@@ -143,26 +54,19 @@ footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
       <li class="fila"><div class="txt"><h3>Consectetur adipiscing elit</h3><small>18 min · 8 MB</small><audio controls preload="none" src="audios/charla-02.mp3">Tu navegador no puede reproducir audio.</audio></div><a class="btn" href="audios/charla-02.mp3" download>Descargar</a></li>
       <li class="fila"><div class="txt"><h3>Sed do eiusmod tempor</h3><small>45 min · 21 MB</small><audio controls preload="none" src="audios/charla-03.mp3">Tu navegador no puede reproducir audio.</audio></div><a class="btn" href="audios/charla-03.mp3" download>Descargar</a></li>
     </ul>
+    <div class="mas"><a class="btn" href="audios.html">Ver todos los audios</a></div>
   </div>
 </section>
 
 <section id="actividades" class="arena2">
   <div class="wrap">
     <h2>Actividades</h2>
-    <p style="margin-bottom:1.8rem;color:var(--suave)">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p style="margin-bottom:1.8rem;color:var(--suave)">Estos son los espacios que ofrece la escuela.</p>
     <ul class="lista">
-      <li class="fila"><div class="fecha"><b>5</b><span>dic</span></div><div class="txt"><h3>Lorem ipsum dolor</h3><small>Sábado, 10:00 h · Sala principal</small></div></li>
-      <li class="fila"><div class="fecha"><b>9</b><span>dic</span></div><div class="txt"><h3>Sit amet consectetur</h3><small>Miércoles, 19:00 h · Sala principal</small></div></li>
-      <li class="fila"><div class="fecha"><b>12</b><span>dic</span></div><div class="txt"><h3>Adipiscing elit sed do</h3><small>Sábado, 10:00 h · Jardín</small></div></li>
-      <li class="fila"><div class="fecha"><b>16</b><span>dic</span></div><div class="txt"><h3>Eiusmod tempor</h3><small>Miércoles, 19:00 h · Sala principal</small></div></li>
+      <li class="fila"><div class="txt"><h3>Meditaciones y Terapia Mística</h3><small>Miércoles de 19:30 a 21 h</small><p>La Terapia Mística te conecta con lo más profundo de ti mismo y te ayuda a encontrar tu guía interior para mejorar en todos los aspectos de tu vida: salud, emociones, sanar tus vínculos, trascender.</p></div></li>
+      <li class="fila"><div class="txt"><h3>Retiros online</h3><small>Fines de semana (según agenda)</small><p>Espacios de exposición más prolongados a las actividades de Meditaciones y Terapia Mística para personas antiguas y semi-nuevas.</p></div></li>
+      <li class="fila"><div class="txt"><h3>Retiros presenciales</h3><small>Fechas a confirmar</small><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></li>
     </ul>
-  </div>
-</section>
-
-<section id="recursos">
-  <div class="wrap">
-    <h2>Recursos</h2>
-    <p class="vacio">Estamos preparando este espacio. Pronto encontrarás aquí materiales de la escuela.</p>
   </div>
 </section>
 
@@ -175,12 +79,12 @@ footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
         <dt>Dirección</dt><dd>Calle Ejemplo 1234, Montevideo</dd>
         <dt>WhatsApp</dt><dd><a href="https://wa.me/59800000000">+598 00 000 000</a></dd>
         <dt>Correo</dt><dd><a href="mailto:contacto@ejemplo.org">contacto@ejemplo.org</a></dd>
-        <dt>Horarios</dt><dd>Sábados 10:00 h · Miércoles 19:00 h</dd>
       </dl>
     </div>
     <div class="mapa" role="img" aria-label="Espacio reservado para el mapa">Aquí irá el mapa de ubicación</div>
   </div>
 </section>
+
 
 </main>
 
