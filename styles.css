@@ -1,5 +1,5 @@
 :root{
-  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#CFE6F2; --celeste-2:#A9CFE3;
+  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#C9DFEA; --celeste-2:#9AC2D8;
   --tinta:#34414B; --suave:#5C6B76; --enlace:#2F6684; --r:28px;
 }
 *{box-sizing:border-box;margin:0}
@@ -83,9 +83,9 @@ nav ul a[aria-current="page"]{background:var(--celeste)}
 
 /* Fondos de naturaleza difuminados */
 .fondo{position:relative;isolation:isolate;background-size:cover;background-repeat:no-repeat}
-.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(246,239,226,.45),rgba(246,239,226,.7) 65%,var(--arena))}
-.mar{background-image:url(img/fondo-mar.jpg);background-position:50% 62%}
-.lirios{background-image:url(img/fondo-lirios.jpg);background-position:50% 50%}
+.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(246,239,226,.4),rgba(246,239,226,.62) 60%,var(--arena))}
+.cielo{background-image:url(img/fondo-cielo.jpg);background-position:50% 72%}
+.ola path{fill:var(--celeste)}
 .hero{padding:7rem 0 6rem}
 .hero .wrap{display:block}
 .hero p{color:var(--tinta);max-width:50ch}

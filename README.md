@@ -11,7 +11,7 @@ web-escuela-jose/
 ├── audios.html             # Todos los audios (reproducir y descargar)
 ├── recursos.html           # Materiales (vacía por ahora)
 ├── styles.css              # Estilos de todo el sitio (colores y tipografía en el bloque :root)
-├── img/                    # Imágenes de fondo (naturaleza, difuminadas)
+├── img/                    # Imagen de fondo (cielo y montañas, difuminada)
 ├── audios/                 # Archivos MP3
 └── README.md
 ```
@@ -59,4 +59,4 @@ En Contacto hay un espacio reservado. En Google Maps: **Compartir → Insertar u
 
 ## Créditos
 
-Fotografías de [Unsplash](https://unsplash.com): Shownroy Leitao y Maddy Baker.
+Fotografía de [Unsplash](https://unsplash.com): Yuriy Kovalev.
