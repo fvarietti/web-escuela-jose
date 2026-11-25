@@ -83,7 +83,7 @@ nav ul a[aria-current="page"]{background:var(--celeste)}
 
 /* Fondos de naturaleza difuminados */
 .fondo{position:relative;isolation:isolate;background-size:cover;background-repeat:no-repeat}
-.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(246,239,226,.15),rgba(246,239,226,.34) 60%,var(--arena))}
+.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(246,239,226,.0),rgba(246,239,226,.35) 60%,var(--arena))}
 .cielo{background-image:url(img/fondo-cielo.jpg);background-position:50% 72%}
 .ola path{fill:var(--celeste)}
 .hero{padding:7rem 0 6rem}
