@@ -53,9 +53,13 @@ Desde la web de GitHub se pueden subir archivos de hasta 25 MB; para más, usa G
 
 Edita `recursos.html`: reemplaza el mensaje `<p class="vacio">` por los contenidos.
 
-### Mapa de ubicación
+### Mapa, Google Maps e Instagram
 
-En Contacto hay un espacio reservado. En Google Maps: **Compartir → Insertar un mapa**, copia el `<iframe>` y reemplaza el `<div class="mapa">…</div>`.
+En Contacto (en `index.html`) hay tres datos de ejemplo para reemplazar:
+
+- **Mapa incrustado**: en Google Maps busca la dirección, pulsa **Compartir → Insertar un mapa**, copia el `src` del `<iframe>` y pégalo en el `<iframe class="mapa">`.
+- **Enlace "Ver en Google Maps"**: cambia el texto después de `query=` por la dirección real, con `+` en lugar de espacios.
+- **Instagram**: cambia `usuario_escuela` por el usuario real, en el enlace y en el texto.
 
 ## Créditos
 
