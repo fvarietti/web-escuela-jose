@@ -18,26 +18,25 @@ p{max-width:62ch}
 section{padding:4.5rem 0}
 
 /* Navegación */
-header{position:sticky;top:0;z-index:10;background:rgba(246,239,226,.93);backdrop-filter:blur(8px)}
+header{position:sticky;top:0;z-index:10;background:var(--celeste);background:color-mix(in srgb,var(--celeste) 94%,transparent);backdrop-filter:blur(8px)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem 0}
 .marca{font-weight:800;text-decoration:none;color:var(--tinta)}
 nav ul{display:flex;gap:.2rem;list-style:none;padding:0;flex-wrap:wrap}
 nav ul a{display:block;padding:.4rem .85rem;border-radius:999px;text-decoration:none;color:var(--tinta);font-weight:600;font-size:.95rem}
-nav ul a:hover{background:var(--celeste)}
+nav ul a:hover{background:var(--arena)}
 
 /* Botones */
-.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:999px;background:var(--celeste-2);color:var(--tinta);font-weight:800;text-decoration:none;transition:background .2s}
-.btn:hover{background:var(--celeste)}
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:999px;background:var(--arena);border:1px solid rgba(52,65,75,.14);box-shadow:0 2px 10px rgba(52,65,75,.12);color:var(--tinta);font-weight:800;text-decoration:none;transition:background .2s}
+.btn:hover{background:#fff}
 
 /* Inicio */
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
 .hero p{margin:1.2rem 0 1.8rem;color:var(--suave);font-size:1.15rem}
 
 /* Olas */
-.ola{display:block;width:100%;height:60px;margin-bottom:-1px}
 
 /* Bandas de color */
-.celeste{background:var(--celeste)}
+.celeste{background:var(--celeste);border-radius:50% / 70px;padding:6.5rem 0}
 .arena2{background:var(--arena-2)}
 
 /* Sobre la escuela */
@@ -48,7 +47,7 @@ nav ul a:hover{background:var(--celeste)}
 
 /* Listas: audios y actividades */
 .lista{list-style:none;padding:0;display:grid;gap:.9rem}
-.fila{display:flex;align-items:center;gap:1.2rem;background:var(--arena);padding:1rem 1.3rem;border-radius:var(--r)}
+.fila{display:flex;align-items:center;gap:1.2rem;background:#FCF9F2;padding:1rem 1.3rem;border-radius:var(--r)}
 .fila .txt{flex:1}
 .fila small{color:var(--suave);font-size:.9rem}
 .fila small{font-weight:600}
@@ -61,7 +60,7 @@ audio{display:block;width:100%;height:40px;margin-top:.7rem}
 .contacto .dos{grid-template-columns:1fr 1fr}
 .contacto dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin-top:1.2rem}
 .contacto dt{font-weight:800}
-.mapa{border-radius:var(--r);background:var(--celeste);min-height:300px;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--suave)}
+.mapa{border-radius:var(--r);background:rgba(255,255,255,.45);min-height:300px;display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--suave)}
 
 .vacio{background:var(--arena-2);padding:2rem;border-radius:var(--r);color:var(--suave)}
 footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
@@ -75,7 +74,7 @@ footer{padding:2rem 0;text-align:center;color:var(--suave);font-size:.95rem}
 }
 
 /* Varias páginas */
-nav ul a[aria-current="page"]{background:var(--celeste)}
+nav ul a[aria-current="page"]{background:var(--arena)}
 .mas{margin-top:1.8rem}
 .texto h2{margin-top:1.8em;font-size:1.4rem}
 .texto p+p{margin-top:1rem}
@@ -83,13 +82,13 @@ nav ul a[aria-current="page"]{background:var(--celeste)}
 
 /* Fondos de naturaleza difuminados */
 .fondo{position:relative;isolation:isolate;background-size:cover;background-repeat:no-repeat}
-.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(246,239,226,.4),rgba(246,239,226,.62) 60%,var(--arena))}
+.fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--celeste),transparent 90px),linear-gradient(rgba(246,239,226,.12),rgba(246,239,226,.34) 55%,var(--arena))}
 .cielo{background-image:url(img/fondo-cielo.jpg);background-position:50% 72%}
-.ola path{fill:var(--celeste)}
 .hero{padding:7rem 0 6rem}
 .hero .wrap{display:block}
-.hero p{color:var(--tinta);max-width:50ch}
+.hero p{color:var(--tinta);max-width:60ch}
 .cabecera{padding:4.5rem 0 3.5rem}
 .cabecera p{color:var(--tinta)}
 .cabecera + section{padding-top:3rem}
 @media (max-width:760px){.hero{padding:4.5rem 0 4rem}.cabecera{padding:3rem 0 2.5rem}}
+@media (max-width:760px){.celeste{border-radius:50% / 40px;padding:5rem 0}}
