@@ -1,5 +1,5 @@
 :root{
-  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#D1E3F4; --celeste-2:#A8CBEB;
+  --arena:#F6EFE2; --arena-2:#EADFCB; --celeste:#C4E4F8; --celeste-2:#96CCEE;
   --tinta:#34414B; --suave:#5C6B76; --enlace:#2F6684; --r:28px;
 }
 *{box-sizing:border-box;margin:0}
@@ -83,6 +83,7 @@ nav ul a[aria-current="page"]{background:var(--arena)}
 .fondo{position:relative;isolation:isolate;background-size:cover;background-repeat:no-repeat}
 .fondo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--celeste),transparent 90px),linear-gradient(rgba(246,239,226,.12),rgba(246,239,226,.34) 55%,var(--arena))}
 .cielo{background-image:url(img/fondo-montanas.jpg);background-position:50% 40%}
+.nubes{background-image:url(img/fondo-nubes.jpg);background-position:50% 50%}
 .hero{padding:7rem 0 6rem}
 .hero .wrap{display:block}
 .hero p{color:var(--tinta);max-width:60ch}

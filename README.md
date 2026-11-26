@@ -11,7 +11,7 @@ web-escuela-jose/
 ├── audios.html             # Todos los audios (reproducir y descargar)
 ├── recursos.html           # Materiales (vacía por ahora)
 ├── styles.css              # Estilos de todo el sitio (colores y tipografía en el bloque :root)
-├── img/                    # Imagen de fondo (montañas y cielo)
+├── img/                    # Imágenes de fondo (cielo y montañas)
 ├── audios/                 # Archivos MP3
 └── README.md
 ```
@@ -62,4 +62,4 @@ En Contacto (en `index.html`) hay dos datos de ejemplo para reemplazar:
 
 ## Créditos
 
-Fotografía de [Unsplash](https://unsplash.com): Susur He.
+Fotografías de [Unsplash](https://unsplash.com): Susur He y Oma Chawhte.
