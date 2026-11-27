@@ -33,6 +33,7 @@ Cada cambio guardado en `main` actualiza el sitio automáticamente.
 - **Textos de la escuela**: `sobre-la-escuela.html`. El resumen del inicio está en `index.html`, en `<section id="escuela">`.
 - **Actividades y contacto**: `index.html`, en `<section id="actividades">` y `<section id="contacto">`. Para una actividad nueva, copia una fila `<li class="fila">` y cambia el título (`<h3>`), el día y horario (`<small>`) y la descripción (`<p>`).
 - **Colores y tipografía**: `styles.css`.
+- **Separador de loto**: bloque `<div class="divisor">` (ícono SVG en línea). Se puede copiar entre secciones; color y opacidad en `.divisor` de `styles.css`.
 - **Menú**: está repetido en cada página `.html`; si lo cambias, hazlo en todas.
 
 ### Agregar un audio
