@@ -99,3 +99,12 @@ nav ul a[aria-current="page"]{background:var(--arena)}
 .divisor::after{background:linear-gradient(270deg,transparent,currentColor)}
 .divisor svg{width:46px;height:29px;flex:none;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
 .cabecera + .divisor + section{padding-top:2.5rem}
+
+/* Contacto: loto a la derecha, texto sobre zona lisa */
+.contacto{position:relative;isolation:isolate;overflow:hidden}
+.contacto::before{content:"";position:absolute;z-index:-1;top:0;right:0;bottom:0;width:55%;background:url(img/fondo-loto.jpg) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 25%,#000 70%);mask-image:linear-gradient(90deg,transparent 25%,#000 70%)}
+.contacto .wrap>div{max-width:480px}
+@media (max-width:900px){
+  .contacto{padding-bottom:calc(5rem + 210px)}
+  .contacto::before{top:auto;width:100%;height:260px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 60%);mask-image:linear-gradient(180deg,transparent,#000 60%)}
+}
