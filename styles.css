@@ -97,7 +97,7 @@ nav ul a[aria-current="page"]{background:var(--arena)}
 .divisor{display:flex;align-items:center;gap:1.1rem;width:min(520px,100% - 2.5rem);margin:1.2rem auto 0;color:#6F8798;opacity:.6}
 .divisor::before,.divisor::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,currentColor)}
 .divisor::after{background:linear-gradient(270deg,transparent,currentColor)}
-.divisor svg{width:46px;height:29px;flex:none;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.divisor img{width:52px;height:auto;flex:none}
 .cabecera + .divisor + section{padding-top:2.5rem}
 
 /* Contacto: loto a la derecha, texto sobre zona lisa */
